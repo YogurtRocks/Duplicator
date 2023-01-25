@@ -706,7 +706,7 @@ class Installer
    */
   protected function extractPackage()
   {
-    $isV2 = strrpos($this->package, self::DUP_PACKAGE2_EXTENSION) == FALSE;
+    $isV2 = strrpos($this->package ? $this->package : '', self::DUP_PACKAGE2_EXTENSION) == FALSE;
     $this->h("Step #3 - Package Extraction");
 
     $this->package = $_SESSION['package'];
